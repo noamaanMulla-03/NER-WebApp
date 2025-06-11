@@ -2,7 +2,6 @@ from django import forms
 from django.forms.widgets import ClearableFileInput
 from .models import DocumentSet
 
-# Custom widget to support multiple file uploads
 class MultipleFileInput(ClearableFileInput):
     allow_multiple_selected = True
 

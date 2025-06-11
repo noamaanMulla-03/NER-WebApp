@@ -44,3 +44,7 @@ poetry.lock
 *.swp
 *.swo
 *.cache
+
+# Media Files
+/ner_project/media/documents/*
+!/ner_project/media/documents/.gitkeep
