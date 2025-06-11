@@ -10,13 +10,34 @@ A Django-based web application for Named Entity Recognition (NER) tasks, enablin
 -   **📱 Responsive UI**: Modern interface built with Tailwind CSS
 -   **🏗️ Modular Design**: Separates authentication and core functionality into dedicated Django apps
 
+## 📸 Screenshots
+
+### 1. User Registration
+
+![User Registration](https://i.postimg.cc/2yTxYWwW/Screenshot-2025-06-11-190812.png)
+
+### 2. Sign In
+
+![Sign In](https://i.postimg.cc/5N7mkwjd/Screenshot-2025-06-11-190751.png)
+
+### 3. Document Upload Interface
+
+![Document Upload Interface](https://i.postimg.cc/HL54xRzd/Screenshot-2025-06-11-190719.png)
+
+### 4. Document Summary Interface
+
+![Summary Interface](https://i.postimg.cc/0yzCgbJ6/Screenshot-2025-06-11-190653.png)
+
+### 5. Summary Generation
+
+![Summary Generation](https://i.postimg.cc/RZ2Lv4cg/Screenshot-2025-06-11-190623.png)
+
 ## 📋 Table of Contents
 
 -   [Requirements](#-requirements)
 -   [Installation](#-installation)
 -   [Configuration](#-configuration)
 -   [Usage](#-usage)
--   [Project Structure](#-project-structure)
 -   [Development](#-development)
 -   [Future Enhancements](#-future-enhancements)
 -   [Contributing](#-contributing)
@@ -71,35 +92,20 @@ pip install -r requirements.txt
 
 ## ⚙️ Configuration
 
-### 1. Environment Variables
-
-Create a `.env` file in the root directory:
-
-```env
-SECRET_KEY=your-secret-key-here
-DEBUG=True
-```
-
-> **Note**: Generate a secure SECRET_KEY using:
->
-> ```bash
-> python -c "import secrets; print(secrets.token_urlsafe(50))"
-> ```
-
-### 2. Database Setup
+### 1. Database Setup
 
 ```bash
 python manage.py makemigrations
 python manage.py migrate
 ```
 
-### 3. Create Superuser
+### 2. Create Superuser (Optional)
 
 ```bash
 python manage.py createsuperuser
 ```
 
-### 4. Run Development Server
+### 3. Run Development Server
 
 ```bash
 python manage.py runserver
@@ -128,7 +134,7 @@ Access the application at **http://127.0.0.1:8000/**
     - Select a DocumentSet from the dropdown
     - View LLM-generated summaries of document titles
 
-### Admin Interface
+### Admin Interface (Requires Superuser)
 
 Access `/admin/` with superuser credentials to manage users, DocumentSets, and Documents.
 
@@ -173,10 +179,6 @@ Ensure the DeepSeek-R1 model is running before generating summaries:
 ```bash
 ollama run deepseek-r1
 ```
-
-### Styling
-
-The project uses Tailwind CSS via CDN for development. For production, consider compiling Tailwind locally.
 
 ## 🚧 Future Enhancements
 
