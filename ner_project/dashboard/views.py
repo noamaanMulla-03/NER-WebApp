@@ -53,7 +53,7 @@ def summary_view(request):
 
             try:
                 response = ollama.chat(
-                    model='deepseek-r1',
+                    model='qwen2:0.5b',
                     messages=[{'role': 'user', 'content': prompt}]
                 )
                 summary = response['message']['content']
